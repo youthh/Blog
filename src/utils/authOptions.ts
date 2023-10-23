@@ -10,7 +10,7 @@ export const authOptions: NextAuthOptions = {
         email: { label: "Username", type: "text" },
         password: { label: "Password", type: "password" },
       },
-      authorize(credentials: any, req) {
+      authorize(credentials: any) {
         return {
           id: "1",
           Email: credentials.email,

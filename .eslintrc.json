@@ -1,37 +1,19 @@
 {
-  "extends": ["react-app", "airbnb", "plugin:react/recommended", "plugin:react-hooks/recommended"],
+  "root": true,
+  "extends": "next",
   "settings": {
-    "import/resolver": {
-      "node": {
-        "moduleDirectory": ["node_modules", "src/"],
-        "extensions": [".ts", ".tsx"]
-      }
+    "next": {
+      "rootDir": "packages/chat/"
     },
-    "react": {
-      "version": "detect"
-    }
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier",
+      "prettier/@typescript-eslint"
+    ]
   },
-  "globals": {
-    "React": true,
-    "System": true
-  },
-  "env": {
-    "es6": true,
-    "browser": true,
-    "node": true
-  },
-  "parser": "@babel/eslint-parser",
-  "parserOptions": {
-    "requireConfigFile": false,
-    "sourceType": "module",
-    "babelOptions": {
-      "presets": ["@babel/preset-react"]
-    },
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  },
-  "plugins": ["react", "@babel", "react-hooks"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
   "rules": {
     "no-case-declarations": 0,
     "no-async-promise-executor": 0,
@@ -105,7 +87,6 @@
     "jsx-a11y/label-has-associated-control": 0,
     "jsx-a11y/label-has-for": 0,
     "react/button-has-type": 0,
-    "react/jsx-one-expression-per-line": 1,
     "react/destructuring-assignment": 1,
     "operator-linebreak": 1,
     "linebreak-style": 0,
@@ -119,6 +100,8 @@
       }
     ],
     "curly": ["error", "all"],
-    "no-unsafe-optional-chaining": ["error"]
+    "no-unsafe-optional-chaining": ["error"],
+    "@typescript-eslint/no-unused-vars": "warn",
+    "no-duplicate-imports": "error"
   }
 }

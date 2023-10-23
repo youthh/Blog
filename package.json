@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint --ext .tsx,.ts --color --max-warnings=0 ./src",
+    "lint:fix": "eslint --ext .tsx,.ts --color ./src --fix"
   },
   "dependencies": {
     "next": "13.5.6",
@@ -19,7 +20,9 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^8",
+    "@typescript-eslint/eslint-plugin": "^6.8.0",
+    "@typescript-eslint/parser": "^6.8.0",
+    "eslint": "^8.52.0",
     "eslint-config-next": "13.5.6",
     "typescript": "^5"
   }
