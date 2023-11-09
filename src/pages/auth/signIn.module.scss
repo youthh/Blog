@@ -1,0 +1,27 @@
+.signIn {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 268px;
+    width: 100%;
+    gap: 10px;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0a0a0a;
+    text-align: center;
+  }
+
+  &__or {
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+  }
+}

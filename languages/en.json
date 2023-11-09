@@ -1,0 +1,8 @@
+{
+  "register": {
+    "signIn": "Sing in",
+    "dontHaveAccount": "Don`t have an account",
+    "singUp": "Sing up",
+     "orSign": "or sign in with"
+  }
+}
